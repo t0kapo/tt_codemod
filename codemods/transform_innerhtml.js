@@ -21,7 +21,7 @@ export default function transformer(file, api) {
           	return true;
         }else if (typeof path.value.right.callee.object === "undefined"){
           	return true;
-        }else if (path.value.right.callee.object.name != 'mypolicy' && path.value.right.callee.property.name != 'createHTML'){
+        }else if (path.value.right.callee.property.name != 'createHTML'){
           	return true;
         }else{
           return false;
